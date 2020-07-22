@@ -4,6 +4,7 @@ const PangramFinder = require('./pangram_finder.js');
 describe('PangramFinder', function () {
   it('should be able to detect a pangram', function () {
     const pangramFinder = new PangramFinder('the quick brown fox jumps over the lazy dog');
+    console.log('pangramFinder.phrase :>> ', pangramFinder.phrase);
     assert.strictEqual(pangramFinder.isPangram(), true);
   });
 
@@ -36,4 +37,5 @@ describe('PangramFinder', function () {
     const pangramFinder = new PangramFinder('');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
+
 });
