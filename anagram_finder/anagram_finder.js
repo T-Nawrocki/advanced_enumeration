@@ -14,6 +14,9 @@ AnagramFinder.prototype.findAnagrams = function (otherWords) {
         // length of both words must match
         result = result && this.word.length === word.length;
 
+        // words cannot be equal
+        result = result && this.word !== word;
+
         return result
     });
 }
