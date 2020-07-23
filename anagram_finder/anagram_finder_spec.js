@@ -36,4 +36,9 @@ describe('AnagramFinder', function () {
     const anagramFinder = new AnagramFinder('word');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['']), []);
   });
+
+  it("should not detect anagram where the two words have the same letters and length, but different quantities of the letters", function () {
+    const anagramFinder = new AnagramFinder("eww");
+    assert.deepStrictEqual(anagramFinder.findAnagrams(["ewe"]), []);
+  });
 });
